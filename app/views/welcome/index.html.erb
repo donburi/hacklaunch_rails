@@ -23,12 +23,14 @@
 				<div class="col-lg-6">
 					<h1>donism - the new religion</h1>
 					<h2 class="subtitle">Nothing to believe in? Believe in Don. Sign up for more.</h2>
-					<form role="form" action="/thanks" method="GET">
+					<form role="form" action="/create" method="POST">
+
 					  <div class="form-group">
 					  	<label for="name">Your Name:</label>
 					    <input type="name" class="form-control" id="name" placeholder="Full Name" name="name">
 					    <label for="email">Your Email:</label>
 					    <input type="email" class="form-control" id="email" placeholder="name@email.com" name="email">
+					    <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 					  </div>
 
 					  <button type="submit" class="btn btn-primary">Submit</button>
